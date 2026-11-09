@@ -24,4 +24,4 @@ jobs:
 
       - name: Exécuter les tests avec couverture
         run: |
-          python -m pytest -v --cov=app --cov-report=term-missing
+          python -m pytest -v --cov=app --cov-report=term-missing --cov-fail-under=90
