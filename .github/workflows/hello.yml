@@ -27,3 +27,12 @@ jobs:
           python --version
           pwd
           ls -la
+      
+      - name: Informations Git
+        run: |
+          echo "Branche : $GITHUB_REF_NAME"
+          echo "Commit : $GITHUB_SHA"
+          echo "Événement : $GITHUB_EVENT_NAME"
+
+
+# Dans le RUN WorkFlow : le developpeur decide quand il va lancer le workflow sur github
