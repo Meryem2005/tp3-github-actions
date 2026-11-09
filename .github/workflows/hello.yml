@@ -34,8 +34,5 @@ jobs:
           echo "Commit : $GITHUB_SHA"
           echo "Événement : $GITHUB_EVENT_NAME"
 
-      - name: Provoquer une erreur
-        run: exit 1
-
 
 # Dans le RUN WorkFlow : le developpeur decide quand il va lancer le workflow sur github
