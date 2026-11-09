@@ -1,0 +1,29 @@
+
+# Nom du workflow affiché dans GitHub
+name: Premier workflow CI
+
+# Les événements qui déclenchent le workflow
+on:
+  push:              # Exécuter automatiquement après un push
+  workflow_dispatch: # Permet de lancer le workflow manuellement
+
+# Contient les tâches à exécuter
+jobs:
+  hello: # Identifiant du job
+
+    runs-on: ubuntu-latest # Machine virtuelle Ubuntu utilisée
+
+    # Liste des étapes à exécuter
+    steps:
+
+      - name: Afficher un message
+        # Exécute une commande dans le terminal Linux
+        run: echo "Hello from GitHub Actions"
+
+      - name: Informations système
+        # Affiche la version de Python, le répertoire courant
+        # et les fichiers présents dans ce répertoire
+        run: |
+          python --version
+          pwd
+          ls -la
